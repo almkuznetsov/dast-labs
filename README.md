@@ -1,4 +1,4 @@
-# Знакомство с DAST
+# Знакомство с DAST v2.0
 
 ## Начальные условия
 Аналогичны [SAST Labs](https://gitlab.basealt.space/kuznetsovam/sast-labs) и рекомендуют (хотя и не требуют) предварительного выполнения последних.
@@ -69,6 +69,8 @@ afl-fuzz -i input/ -o out/ -- ./program [...program's cmdline...] @@
 - директория out/ со сгенерированными фаззером файлами.
 
 ## Changelog
+* Mon Oct 21 2024 Alexander Kuznetsov <kuznetsovam@basealt.ru> v2.0
+    - Добавлена 2 часть.
 
 * Mon Oct 07 2024 Alexander Kuznetsov <kuznetsovam@basealt.ru> v1.0
     - Добавлена 1 часть.
