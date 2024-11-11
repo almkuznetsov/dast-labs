@@ -1,4 +1,4 @@
-# Знакомство с DAST v2.1
+# Знакомство с DAST v3.0
 
 ## Начальные условия
 Аналогичны [SAST Labs](https://gitlab.basealt.space/kuznetsovam/sast-labs) и рекомендуют (хотя и не требуют) предварительного выполнения последних.
@@ -152,6 +152,9 @@ casr-afl -f -i /dast-labs/afl-out/ -o /dast-labs/casr-out -t 1
 - Попробуйте проанализировать и исправить другие прошедшие дедупликацию сработки.
 
 ## Changelog
+* Mon Nov 11 2024 Alexander Kuznetsov <kuznetsovam@basealt.ru> v3.0
+    - Добавлена 3 часть.
+
 * Mon Oct 21 2024 Alexander Kuznetsov <kuznetsovam@basealt.ru> v2.1
     - Инвертированы варианты во 2 части.
 
