@@ -1,0 +1,4 @@
+/fuzz/libvirt/build/src/libvirtd
+-l
+-f
+/fuzz/libvirtd.conf
