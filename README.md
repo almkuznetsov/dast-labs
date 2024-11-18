@@ -1,4 +1,4 @@
-# Знакомство с DAST v3.0
+# Знакомство с DAST v4.0
 
 ## Начальные условия
 Аналогичны [SAST Labs](https://gitlab.basealt.space/kuznetsovam/sast-labs) и рекомендуют (хотя и не требуют) предварительного выполнения последних.
@@ -276,6 +276,9 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size){
 Также мы познакомились с новым фаззером - Libfuzzer, разработали обертку для его запуска и проверили её совместимость с уже известным нам AFL++.
 
 ## Changelog
+* Mon Nov 18 2024 Alexander Kuznetsov <kuznetsovam@basealt.ru> v4.0
+    - Добавлена 4 часть.
+
 * Mon Nov 11 2024 Alexander Kuznetsov <kuznetsovam@basealt.ru> v3.0
     - Добавлена 3 часть.
 
