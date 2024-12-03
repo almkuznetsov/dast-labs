@@ -204,7 +204,7 @@ afl-clang-lto++ wrapper.cpp src/pugixml.cpp -o wrapper
 ### Shared memory fuzzing
 Ускорим фаззинг путем загрузки входных данных из разделяемой памяти, без необходимости чтения cin. Для этого воспользуемся shared memory возможностями AFL++.
 
-Добавим инициализацию разделяемой памяти (`__AFL_FUZZ_INIT()`) и присвоим уже использованным переменным новые значения (`__AFL_FUZZ_TESTCASE_BUF` и `__AFL_FUZZ_TESTCASE_LEN`):
+Добавим инициализацию разделяемой памяти (`__AFL_FUZZ_INIT()` перед `main()`) и присвоим уже использованным переменным новые значения (`__AFL_FUZZ_TESTCASE_BUF` и `__AFL_FUZZ_TESTCASE_LEN`):
 ```cpp
 [...]
 
@@ -241,7 +241,10 @@ int main() {
 
     __AFL_INIT();
 
+    unsigned char *data = __AFL_FUZZ_TESTCASE_BUF;
+
     while (__AFL_LOOP(UINT8_MAX)) {
+        ssize_t size = __AFL_FUZZ_TESTCASE_LEN;
         [...]
     }
 
