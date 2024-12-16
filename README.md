@@ -1,4 +1,4 @@
-# Знакомство с DAST v5.3
+# Знакомство с DAST v5.4
 
 ## Начальные условия
 Аналогичны [SAST Labs](https://gitlab.basealt.space/kuznetsovam/sast-labs) и рекомендуют (хотя и не требуют) предварительного выполнения последних.
@@ -359,6 +359,10 @@ clang++ -fsanitize=fuzzer,address,undefined wrapper.cpp src/pugixml.cpp -o wrapp
 В ходе выполнения задач 5 части мы научились минимизировать входной корпус, рассмотрели сборку с санитайзерами и запуск фаззинга в несколько потоков.
 
 ## Changelog
+* Mon Dec 16 2024 Alexander Kuznetsov <kuznetsovam@basealt.ru> v5.4
+    - Добавлена лицензия.
+    - Добавлено требование по сборке актуальной в апстриме версии.
+
 * Tue Dec 03 2024 Alexander Kuznetsov <kuznetsovam@basealt.ru> v5.3
     - Часть 3: выделены задания 3.1 и 3.2, добавлена подсказка по casr-cli;
     - Часть 4: улучшено описание добавляемых в обертки блоков.
