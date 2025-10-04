@@ -1,10 +1,13 @@
-# Знакомство с DAST v5.4
+# Знакомство с DAST v6.0
 
 ## Начальные условия
 Аналогичны [SAST Labs](https://gitlab.basealt.space/kuznetsovam/sast-labs) и рекомендуют (хотя и не требуют) предварительного выполнения последних.
 
 
 ## Changelog
+* Sat Oct 4 2025 Alexander Kuznetsov <kuznetsovam@basealt.ru> v6.0
+    - Задания разнесены по разным папкам.
+
 * Mon Dec 16 2024 Alexander Kuznetsov <kuznetsovam@basealt.ru> v5.4
     - Добавлена лицензия.
     - Добавлено требование по сборке актуальной в апстриме версии.
