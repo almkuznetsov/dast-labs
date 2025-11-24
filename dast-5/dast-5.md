@@ -102,6 +102,7 @@ int main() {
 ```cpp
 #include "src/pugixml.hpp"
 #include <iostream>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -109,7 +110,7 @@ int main() {
 extern "C" int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size){
     pugi::xml_document doc;
     doc.load_buffer(data, size);
-	return 0;
+    return 0;
 }
 ```
 
