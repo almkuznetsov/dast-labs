@@ -1,10 +1,15 @@
-# Знакомство с DAST v6.1
+# Знакомство с DAST v6.2
 
 ## Начальные условия
 Аналогичны [SAST Labs](https://gitlab.basealt.space/kuznetsovam/sast-labs) и рекомендуют (хотя и не требуют) предварительного выполнения последних.
 
 
 ## Changelog
+* Mon Mar 30 2026 Alexander Kuznetsov <kuznetsovam@altlinux.org> v6.2
+    - Добавлена часть 7;
+    - dast-4: обновлены требования к артефактам;
+    - dast-5,6: обновлены примеры кода и итоги.
+
 * Mon Oct 27 2025 Alexander Kuznetsov <kuznetsovam@altlinux.org> v6.1
     - Часть 3 разделена на две части: 3.1 стала частью 3, а 3.2 стала частью 4;
     - Минимизация входного корпуса перенесена из части 6 в часть 3.
