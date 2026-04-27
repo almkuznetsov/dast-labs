@@ -1,10 +1,14 @@
-# Знакомство с DAST v6.2
+# Знакомство с DAST v6.3
 
 ## Начальные условия
 Аналогичны [SAST Labs](https://gitlab.basealt.space/kuznetsovam/sast-labs) и рекомендуют (хотя и не требуют) предварительного выполнения последних.
 
 
 ## Changelog
+* Mon Apr 27 2026 Alexander Kuznetsov <kuznetsovam@altlinux.org> v6.3
+    - Добавлены части 8 и 9;
+    - dast-4: afl-out и backup убраны из корня репозитория в папку dast-4.
+
 * Mon Mar 30 2026 Alexander Kuznetsov <kuznetsovam@altlinux.org> v6.2
     - Добавлена часть 7;
     - dast-4: обновлены требования к артефактам;
