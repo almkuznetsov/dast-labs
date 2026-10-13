@@ -5,10 +5,13 @@
 - Вариант 1. [tar](https://www.gnu.org/software/tar/) - утилита GNU Project для создания архивов
 - Вариант 2. [gzip](https://www.gnu.org/software/gzip/) - утилита GNU Project для сжатия файлов
 
-В ходе выполнения заданий 1 части у нас должны получиться следующие артефакты работы:
-- скриншоты выполнения пунктов задания;
-- скриншоты запущенного процесса AFLplusplus;
-- директории input/ и out/ со входными и сгенерированными фаззером файлами.
+Результат сдаётся по [общим правилам](../SUBMISSION.md). В PR должны находиться:
+
+- `submission/submission.json` с вариантом, версией проекта, окружением и командами;
+- `submission/artifacts/input/` с начальным корпусом;
+- `submission/artifacts/out/` с полными результатами собственного запуска AFLplusplus;
+- журнал `submission/artifacts/logs/build.txt`
+- скриншоты `submission/artifacts/screenshots/build.png` и `fuzzing.png`.
 
 ### Настройка окружения
 #### Установка AFLplusplus
@@ -27,12 +30,16 @@ CC=afl-clang-lto CXX=afl-clang-lto++ make
 ```
 Требуется выполнить таким образом сборку выбранной утилиты.
 
+Сделайте `submission/artifacts/screenshots/build.png`: в кадре должны быть
+видны команда сборки с инструментацией и её успешное завершение.
+
 ### Запуск фаззинг-тестирования
 Создадим директорию для входных данных:
 ```shell
 mkdir input
 ```
-Поскольку AFLplusplus требуется хотя бы один входной фазапуск утилиты производится надйл для запуска, создадим тестовый файл:
+
+Поскольку AFLplusplus требуется хотя бы один входной файл для запуска, создадим тестовый файл:
 ```shell
 echo "test" > input/1
 ```
@@ -45,6 +52,22 @@ echo "test" > input/1
 ```shell
 afl-fuzz -i input/ -o out/ -- ./program [...program's cmdline...] @@
 ```
+
+Сделайте `submission/artifacts/screenshots/fuzzing.png`: в кадре должны быть
+виден работающий AFLplusplus.
+
+### Сдача задания
+
+После остановки фаззинга скопируйте начальный `input/` и весь `out/` в
+`submission/artifacts/` выданного репозитория.
+
+Заполните `submission/submission.json` по [формату DAST-1](../SUBMISSION.md#submissionjson):
+`schema_version` — `1`, `assignment` — `dast-1`, `variant` — номер выбранного
+варианта. В `project` укажите `tar` или `gzip`, версию и точный источник
+исходников; в `environment` — ОС, версии AFLplusplus и компилятора; в `build`
+и `fuzzing` — фактические команды, рабочие каталоги и пути к артефактам.
+В `fuzzing.stats` укажите путь к сохранённому `fuzzer_stats`, а в
+`fuzzing.duration_seconds` — измеренное время запуска в секундах (может быть любое).
 
 ### Итог 1 части
 В ходе 1 части мы научились запускать фаззинг-тестирование для утилит командной строки.
