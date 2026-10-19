@@ -1,10 +1,14 @@
-# Знакомство с DAST v7.0
+# Знакомство с DAST v7.1
 
 ## Начальные условия
 Аналогичны [SAST Labs](https://gitlab.basealt.space/kuznetsovam/sast-labs) и рекомендуют (хотя и не требуют) предварительного выполнения последних.
 
 
 ## Changelog
+* Mon Oct 19 2026 Alexander Kuznetsov <kuznetsovam@altlinux.org> v7.1
+    - Добавлен dast-project.
+    - dast-2: обновлен для поддержки формата из SUBMISSION.md
+
 * Tue Oct 13 2026 Alexander Kuznetsov <kuznetsovam@altlinux.org> v7.0
     - Добавлен SUBMISSION.md с новой схемой сдачи, dast-1 обновлен в соответствии с этим.
 
